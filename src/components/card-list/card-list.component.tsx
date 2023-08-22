@@ -1,7 +1,13 @@
 import Card from "../card/card.component";
 import "./card-list.styles.css"
 
-const CardList = ({monsters}) => (
+import { Monster } from "../../App";
+
+type monsterArray = {
+    monsters: Monster[]
+}
+
+const CardList = ({monsters}:monsterArray) => (
         <div className="card-list">
         {
             monsters.map((monster)=>{
